@@ -5,6 +5,7 @@
     padding: 100px 0;
     gap: 60px;
     background-image: var(--heroBg);
+    background-size: cover;
 }
 
 .content {
