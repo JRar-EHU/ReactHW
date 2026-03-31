@@ -1,0 +1,16 @@
+.link{
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: var(--fw-regular);
+    color: var(--color-primary);
+}
+
+.link:hover{
+    color: var(--color-highlight);
+}
+
+.isActive{
+    color: var(--color-highlight);
+    font-weight: var(--fw-bold);
+}

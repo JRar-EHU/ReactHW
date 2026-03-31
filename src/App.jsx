@@ -1,14 +1,12 @@
-import ItemList from "@components/itemList/ItemList.jsx";
+import { MainLayout } from "@components/layout/MainLayout/MainLayout.jsx";
+import { HomePage } from "./pages/HomePage.jsx";
 
 export default function App() {
-  const itemsList = {
-    itemsType: "Numbers List",
-    items: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-  };
   return (
     <>
-      <h1>Hello World</h1>
-      <ItemList items={itemsList} />
+      <MainLayout>
+        <HomePage />
+      </MainLayout>
     </>
   );
 }
