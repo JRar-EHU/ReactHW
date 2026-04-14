@@ -38,14 +38,14 @@
     color: var(--color-highlight);
 }
 
-.cardSectionControls{
+.categorySectionControls{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
 }
 
-.cardSectionControlsBtn{
+.categorySectionControlsBtn{
     width: 150px;
 }
 
