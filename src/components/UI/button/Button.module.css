@@ -1,0 +1,55 @@
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    background: none;
+    padding:0;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.primary {
+    background-image: var(--btnBg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.empty {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    padding: 0;
+    aspect-ratio: 1 / 1 ;
+    flex-shrink: 0;
+}
+
+.sm {
+    height: 30px;
+    /*padding: 0 16px;*/
+    /*font-weight: var(--fw-regular);*/
+}
+
+.md {
+    height: 55px;
+    /*padding: 0 30px;*/
+    /*font-size: 16px;*/
+    /*font-weight: var(--fw-medium);*/
+}
+
+.lg {
+    height: 90px;
+    /*padding:  0 45px;*/
+    /*font-size: 18px;*/
+    /*font-weight: var(--fw-bold);*/
+}
