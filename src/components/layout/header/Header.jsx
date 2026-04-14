@@ -2,8 +2,10 @@ import styles from "./Header.module.css";
 import { Logo } from "@components/UI/logo/Logo.jsx";
 import { NavLink } from "@components/UI/navLink/NavLink.jsx";
 import { Cart } from "@components/features/cart/Cart.jsx";
+import { useCart } from "../../../context/CartContext.jsx";
 
 export const Header = () => {
+  const { cartCount } = useCart();
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -19,7 +21,7 @@ export const Header = () => {
           </nav>
 
           <div className={styles.cart}>
-            <Cart count={2} />
+            <Cart count={cartCount} />
           </div>
         </div>
       </div>

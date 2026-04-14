@@ -18,16 +18,23 @@ html {
     --btnBg: url('./assets/images/order-button.png');
     --heroBg: url('./assets/images/main-bg.png');
     --footerBg: url('./assets/images/footer-bg.png');
+    --menuBg: url('./assets/images/menu-page-bg.png');
 
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-semibold: 600;
     --fw-bold: 700;
 
+    --fs-small: 16px;
+    --fs-medium: 18px;
+    --fs-large: 50px;
+
     --color-primary: black;
     --color-text: #546285;
     --color-highlight: #35B8BE;
     --color-text-transparent: rgba(84, 98, 133, 0.15);
+    --color-border: #61728333 ;
+    --card-border:#35B8BE26;
 
     --main-padding-val: 120px;
     --main-padding: 0 var(--main-padding-val);

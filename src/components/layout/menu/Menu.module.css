@@ -1,0 +1,68 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 140px 0;
+    padding-inline: var(--main-padding-val);
+    margin-inline: calc(var(--main-padding-val) * -1);
+
+    background: var(--menuBg) no-repeat center / cover;
+
+    min-height: 100vh;
+}
+
+.navSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title {
+    font-size: var(--fs-large);
+    font-weight: var(--fw-regular);
+    color: var(--color-highlight);
+}
+
+.navSectionText {
+    text-align: center;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-regular);
+    color: var(--color-text);
+}
+
+.highlight{
+    color: var(--color-highlight);
+}
+
+.cardSectionControls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cardSectionControlsBtn{
+    width: 150px;
+}
+
+.cardsSection {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+    padding-top: 40px;
+    padding-bottom: 45px;
+}
+
+.seeMore{
+    text-align: center;
+}
