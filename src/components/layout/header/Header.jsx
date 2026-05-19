@@ -14,10 +14,11 @@ export const Header = () => {
         </div>
         <div className={styles.secondContainer}>
           <nav className={styles.nav}>
-            <NavLink label="Home" />
-            <NavLink label="Menu" />
-            <NavLink label="Company" />
-            <NavLink label="Login" />
+            <NavLink href="/" label="Home" />
+            <NavLink href="/menu" label="Menu" />
+            <NavLink href="/company" label="Company" />
+            <NavLink href="/login" label="Login" />
+            <NavLink href="/orders" label="Orders" />
           </nav>
 
           <div className={styles.cart}>

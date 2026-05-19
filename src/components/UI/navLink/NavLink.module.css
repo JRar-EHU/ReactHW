@@ -10,7 +10,10 @@
     color: var(--color-highlight);
 }
 
+.disabled {
+    pointer-events: none;
+}
+
 .isActive{
     color: var(--color-highlight);
-    font-weight: var(--fw-bold);
 }
