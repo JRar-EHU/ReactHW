@@ -1,13 +1,13 @@
-import { MainLayout } from "@components/layout/MainLayout/MainLayout.jsx";
-import { HomePage } from "./pages/homePage/HomePage.jsx";
-import { MenuPage } from "./pages/menuPage/MenuPage.jsx";
-import { ErrorBoundary } from "@components/UI/errorBoundary/ErrorBoundary.jsx";
+import { MainLayout } from "@components/layout/MainLayout/MainLayout.js";
+import { HomePage } from "./pages/homePage/HomePage.js";
+import { MenuPage } from "./pages/menuPage/MenuPage.js";
+import { ErrorBoundary } from "@components/UI/errorBoundary/ErrorBoundary.js";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { NotFoundPage } from "./pages/notFoundPage/NotFoundPage.jsx";
-import { MenuDetailPage } from "./pages/menuDetailPage/MenuDetailPage.jsx";
-import { LoginPage } from "./pages/loginPage/LoginPage.jsx";
-import { OrderPage } from "./pages/orderPage/OrderPage.jsx";
-import { RequireAuth } from "@components/features/requireAuth/RequireAuth.jsx";
+import { NotFoundPage } from "./pages/notFoundPage/NotFoundPage.js";
+import { MenuDetailPage } from "./pages/menuDetailPage/MenuDetailPage.js";
+import { LoginPage } from "./pages/loginPage/LoginPage.js";
+import { OrderPage } from "./pages/orderPage/OrderPage.js";
+import { RequireAuth } from "@components/features/requireAuth/RequireAuth.js";
 
 export default function App() {
   return (

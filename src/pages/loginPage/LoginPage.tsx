@@ -1,21 +1,21 @@
 import styles from "./LoginPage.module.css";
-import { Button } from "@components/UI/button/Button.jsx";
+import { Button } from "@components/UI/button/Button";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
-import { useAuth } from "@hooks/useAuth.js";
+import { useAuth } from "@hooks/useAuth";
 import { useDispatch } from "react-redux";
-import { setUser } from "../../store/slices/authSlice.js";
+import { setUser } from "@store/slices/authSlice";
 
 export const LoginPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const usernameRef = useRef(null);
-  const passwordRef = useRef(null);
+  const usernameRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
   const { login, isLoading } = useAuth();
 
   const handleLogin = async () => {
-    const name = usernameRef.current.value;
-    const password = passwordRef.current.value;
+    const name = usernameRef.current?.value;
+    const password = passwordRef.current?.value;
     if (name && password) {
       try {
         const loggedInUser = await login(name, password);

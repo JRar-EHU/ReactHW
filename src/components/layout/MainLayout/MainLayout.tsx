@@ -1,6 +1,6 @@
 import styles from "./MainLayout.module.css";
-import { Header } from "@components/layout/header/Header.jsx";
-import { Footer } from "@components/layout/footer/Footer.jsx";
+import { Header } from "@components/layout/header/Header";
+import { Footer } from "@components/layout/footer/Footer";
 import { Outlet } from "react-router-dom";
 
 export const MainLayout = () => {

@@ -1,4 +1,4 @@
-import { Menu } from "@components/layout/menu/Menu.jsx";
+import { Menu } from "@components/layout/menu/Menu";
 
 export const MenuPage = () => {
   return (

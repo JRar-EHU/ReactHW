@@ -1,25 +1,26 @@
 import styles from "./SimpleCounterInput.module.css";
-import React from "react";
+import React, { ChangeEvent } from "react";
+import { SimpleCounterInputProps } from "@types";
 
 export const SimpleCounterInput = ({
-  type = "number",
   value,
   min = 1,
-  onChange,
+  onValueChange,
   className = "",
   ...rest
-}) => {
-  const handleChange = (e) => {
+}: SimpleCounterInputProps) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);
-    if (Number.isNaN(value) || value < 1) {
-      onChange(min);
+    if (Number.isNaN(value) || value < min) {
+      onValueChange(min);
     } else {
-      onChange(value);
+      onValueChange(value);
     }
   };
+
   return (
     <input
-      type={type}
+      type="number"
       value={value}
       min={min}
       onChange={handleChange}

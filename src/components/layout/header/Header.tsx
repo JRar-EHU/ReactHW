@@ -1,11 +1,11 @@
 import styles from "./Header.module.css";
-import { Logo } from "@components/UI/logo/Logo.jsx";
-import { NavLink } from "@components/UI/navLink/NavLink.jsx";
-import { Cart } from "@components/features/cart/Cart.jsx";
-import { useSelector } from "react-redux";
+import { Logo } from "@components/UI/logo/Logo.js";
+import { NavLink } from "@components/UI/navLink/NavLink.js";
+import { Cart } from "@components/features/cart/Cart";
+import { useAppSelector } from "@store/hooks";
 
 export const Header = () => {
-  const cartCount = useSelector((state) => state.cart.cartCount);
+  const cartCount = useAppSelector((state) => state.cart.cartCount);
   return (
     <header className={styles.header}>
       <div className={styles.container}>
