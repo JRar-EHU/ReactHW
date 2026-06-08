@@ -26,3 +26,14 @@ If you are developing a production application, we recommend using TypeScript wi
 * **CSS / CSS Modules**
 
 ---
+
+Сделано:
+Сверстана MenuPage
+Созданы:
+- компонент ProductCard
+- layout компонент Menu
+- компонент simpleCounterInput для productCard
+- контекст для объединения Cart и ProductCard
+- fetch функция getMeals() в utils
+Исправлено:
+- ссылки в Footer

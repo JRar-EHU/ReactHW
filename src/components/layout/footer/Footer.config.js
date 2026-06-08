@@ -11,10 +11,10 @@ export const FOOTER_LINKS = [
   {
     title: "TEMPLATE",
     links: [
-      { label: "Style Guide", href: "" },
-      { label: "Changelog", href: "" },
-      { label: "Licence", href: "" },
-      { label: "Webflow University", href: "" },
+      { label: "Style Guide", href: "https://www.google.com/ " },
+      { label: "Changelog", href: "https://www.google.com/ " },
+      { label: "Licence", href: "https://www.google.com/ " },
+      { label: "Webflow University", href: "https://www.google.com/ " },
     ],
   },
   {

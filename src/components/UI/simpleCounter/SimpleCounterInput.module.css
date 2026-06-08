@@ -1,0 +1,17 @@
+.input {
+    font-family: inherit;
+
+
+    aspect-ratio: 1/1;
+
+    font-size: var(--fs-small);
+    font-weight: var(--fw-regular);
+    text-align: center;
+
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+
+    background-color: #FAFAFA;
+
+    outline: none;
+}
