@@ -19,6 +19,8 @@ html {
     --heroBg: url('./assets/images/main-bg.png');
     --footerBg: url('./assets/images/footer-bg.png');
     --menuBg: url('./assets/images/menu-page-bg.png');
+    --lightTheme: url('./assets/icons/sun-icon.svg');
+    --darkTheme: url('./assets/icons/moon-icon.svg');
 
     --fw-regular: 400;
     --fw-medium: 500;
@@ -35,7 +37,24 @@ html {
     --color-text-transparent: rgba(84, 98, 133, 0.15);
     --color-border: #61728333 ;
     --card-border:#35B8BE26;
+    --productCard-bg: white;
+    --input-bg: white;
 
     --main-padding-val: 120px;
     --main-padding: 0 var(--main-padding-val);
+}
+
+html[data-theme="dark"] {
+    background-color: #292a2e;
+
+    --color-primary: #f5f5f7;
+    --color-text: #b0b8c8;
+    --color-text-transparent: rgb(255 255 255 / 0.85);
+    --color-border: rgba(255, 255, 255, 0.10);
+    --card-border: rgba(77, 208, 225, 0.18);
+    --input-bg: #a3a3a3;
+    --heroBg: url('./assets/images/main-bg-dark.png');
+    --footerBg: url('./assets/images/footer-bg-dark.png');
+    --menuBg: url('./assets/images/menu-page-bg-dark.png');
+    --productCard-bg: rgb(41 42 46 / 0.47);
 }
