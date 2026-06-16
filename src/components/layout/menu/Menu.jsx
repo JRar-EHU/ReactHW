@@ -7,17 +7,28 @@ import { getMeals } from "../../../utils/api.jsx";
 export const Menu = () => {
   const [meals, setMeals] = useState([]);
   const [visibleCount, setVisibleCount] = useState(6);
+  const [activeCategory, setActiveCategory] = useState("Dessert");
 
+  const categories = ["Dessert", "Dinner", "Breakfast"];
   useEffect(() => {
     getMeals().then(setMeals);
   }, []);
 
-  const visibleMeals = meals.slice(0, visibleCount);
+  const filteredMeals = meals.filter(
+    (meal) => meal.category === activeCategory,
+  );
+
+  const visibleMeals = filteredMeals.slice(0, visibleCount);
 
   const handleSeeMore = () => {
-    console.log("updated");
     setVisibleCount((prevState) => prevState + 6);
   };
+
+  const handleCategoryChange = (category) => {
+    setActiveCategory(category);
+    setVisibleCount(6);
+  };
+
   return (
     <div className={styles.menu}>
       <div className={styles.navSection}>
@@ -29,20 +40,19 @@ export const Menu = () => {
         </p>
       </div>
       <div className={styles.cardsSection}>
-        <div className={styles.cardSectionControls}>
-          <Button className={styles.cardSectionControlsBtn}>Desert</Button>
-          <Button
-            variant={"inactive"}
-            className={styles.cardSectionControlsBtn}
-          >
-            Dinner
-          </Button>
-          <Button
-            variant={"inactive"}
-            className={styles.cardSectionControlsBtn}
-          >
-            Breakfast
-          </Button>
+        <div className={styles.categorySectionControls}>
+          {categories.map((category) => (
+            <Button
+              key={category}
+              variant={activeCategory === category ? "primary" : "inactive"}
+              onClick={() => {
+                handleCategoryChange(category);
+              }}
+              className={styles.categorySectionControlsBtn}
+            >
+              {category}
+            </Button>
+          ))}
         </div>
         <div className={styles.cards}>
           {visibleMeals.map((meal) => (
@@ -54,15 +64,14 @@ export const Menu = () => {
               description={
                 "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
               }
-              onAdd={(qty) => console.log("Added: ", meal.meal, qty)}
             />
           ))}
         </div>
         <div className={styles.seeMore}>
-          {visibleCount < meals.length && (
+          {visibleCount < filteredMeals.length && (
             <Button
               onClick={handleSeeMore}
-              className={styles.cardSectionControlsBtn}
+              className={styles.categorySectionControlsBtn}
             >
               See more
             </Button>
