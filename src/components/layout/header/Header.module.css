@@ -35,3 +35,8 @@
     align-items: center;
     padding-right: 20px;
 }
+.langDropdown{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}

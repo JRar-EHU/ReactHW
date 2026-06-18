@@ -1,24 +1,36 @@
 export const FOOTER_LINKS = [
   {
-    title: "COMPANY",
+    titleKey: "footer.links.company.company",
     links: [
-      { label: "Home", href: "" },
-      { label: "Order", href: "" },
-      { label: "FAQ", href: "" },
-      { label: "Contact", href: "" },
+      { labelKey: "footer.links.company.home", href: "/" },
+      { labelKey: "footer.links.company.order", href: "/orders" },
+      { labelKey: "footer.links.company.faq", href: "/faq" },
+      { labelKey: "footer.links.company.contact", href: "/contact" },
     ],
   },
   {
-    title: "TEMPLATE",
+    titleKey: "footer.links.template.template",
     links: [
-      { label: "Style Guide", href: "https://www.google.com/ " },
-      { label: "Changelog", href: "https://www.google.com/ " },
-      { label: "Licence", href: "https://www.google.com/ " },
-      { label: "Webflow University", href: "https://www.google.com/ " },
+      {
+        labelKey: "footer.links.template.style_guide",
+        href: "https://www.google.com/",
+      },
+      {
+        labelKey: "footer.links.template.changelog",
+        href: "https://www.google.com/",
+      },
+      {
+        labelKey: "footer.links.template.licence",
+        href: "https://www.google.com/",
+      },
+      {
+        labelKey: "footer.links.template.webflow_university",
+        href: "https://www.google.com/",
+      },
     ],
   },
   {
-    title: "FLOWBASE",
-    links: [{ label: "More Cloneables", href: "" }],
+    titleKey: "footer.links.flowbase.flowbase",
+    links: [{ labelKey: "footer.links.flowbase.more_clonables", href: "" }],
   },
 ];

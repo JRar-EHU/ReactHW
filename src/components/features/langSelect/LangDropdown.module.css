@@ -1,0 +1,13 @@
+.langDropdown {
+    font-family: inherit;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-regular);
+    text-align: center;
+
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+
+    background-color: var(--input-bg);
+
+    outline: none;
+}

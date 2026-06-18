@@ -27,7 +27,8 @@
       "@assets/*": ["./src/assets/*"],
       "@store/*": ["./src/store/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@types": ["./src/types.ts"]
+      "@types": ["./src/types.ts"],
+      "@context/*": ["./src/context/*"]
     }
   },
   "include": ["src", "**/*.ts", "**/*.tsx", "custom.d.ts"],

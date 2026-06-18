@@ -1,0 +1,39 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "menu": "Speisekarte",
+    "company": "Unternehmen",
+    "login": "Anmelden",
+    "orders": "Bestellungen"
+  },
+  "hero": {
+    "title": "Schönes Essen und Lieferservice, <highlight>geliefert</highlight> zu Ihrer Tür.",
+    "description": "Lorem Ipsum ist ein Platzhaltertext der Druck- und Verlagswesen. Lorem Ipsum ist seit dem 16. Jahrhundert der Standardtext in dieser Branche.",
+    "button": "Jetzt bestellen",
+    "reviews": "<highlight>4.8 von 5</highlight> basierend auf über 2000 Bewertungen"
+  },
+  "footer": {
+    "title": "Takeaway & Lieferung Vorlage <br/> für kleine und mittlere Unternehmen.",
+    "links": {
+      "company": {
+        "company": "UNTERNEHMEN",
+        "home": "Startseite",
+        "order": "Bestellung",
+        "faq": "FAQ",
+        "contact": "Kontakt"
+      },
+      "template": {
+        "template": "VORLAGE",
+        "style_guide": "Styleguide",
+        "changelog": "Änderungsprotokoll",
+        "licence": "Lizenz",
+        "webflow_university": "Webflow Universität"
+      },
+      "flowbase": {
+        "flowbase": "FLOWBASE",
+        "more_clonables": "Weitere Klone"
+      }
+    },
+    "copyright": "Erstellt von <highlight>Flowbase</highlight> · Unterstützt von <highlight>Webflow</highlight>"
+  }
+}
