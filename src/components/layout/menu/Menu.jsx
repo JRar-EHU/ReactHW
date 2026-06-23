@@ -1,18 +1,22 @@
 import styles from "./menu.module.css";
 import { Button } from "@components/UI/button/Button.jsx";
 import { ProductCard } from "@components/features/productCard/ProductCard.jsx";
-import { useEffect, useState } from "react";
-import { getMeals } from "../../../utils/api.jsx";
+import { useState } from "react";
+import { useFetch } from "@hooks/useFetch.js";
 
 export const Menu = () => {
-  const [meals, setMeals] = useState([]);
   const [visibleCount, setVisibleCount] = useState(6);
   const [activeCategory, setActiveCategory] = useState("Dessert");
 
   const categories = ["Dessert", "Dinner", "Breakfast"];
-  useEffect(() => {
-    getMeals().then(setMeals);
-  }, []);
+
+  const url = "https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals";
+  const { data: meals = [], loading, error } = useFetch(url);
+  if (loading) return <div>Loading...</div>;
+  if (error) {
+    console.log(error);
+    return <div>Failed to fetch meals</div>;
+  }
 
   const filteredMeals = meals.filter(
     (meal) => meal.category === activeCategory,
