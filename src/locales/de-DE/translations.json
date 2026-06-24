@@ -4,7 +4,8 @@
     "menu": "Speisekarte",
     "company": "Unternehmen",
     "login": "Anmelden",
-    "orders": "Bestellungen"
+    "orders": "Bestellungen",
+    "logout": "Abmelden"
   },
   "hero": {
     "title": "Schönes Essen und Lieferservice, <highlight>geliefert</highlight> zu Ihrer Tür.",

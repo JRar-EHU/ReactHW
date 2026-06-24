@@ -16,7 +16,7 @@ export const ThemeToggle = () => {
       isIcon={true}
       onClick={toggleTheme}
       aria-label="Toggle theme"
-      area-pressed={theme === "dark"}
+      aria-pressed={theme === "dark"}
       className={styles.themeToggle}
     >
       {theme === "dark" ? (

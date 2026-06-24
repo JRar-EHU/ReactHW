@@ -2,10 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
     padding: 40px 0;
     color: var(--color-primary);
+    padding-inline: var(--main-padding-val);
+    margin-inline: calc(var(--main-padding-val) * -1);
+    background: var(--menuBg) no-repeat top center / 100% auto;
+}
+
+.title {
+    color: var(--color-highlight);
+    font-size: var(--fs-large);
+    font-weight: var(--fw-regular);
 }
 
 .label {
@@ -22,4 +29,21 @@
     border-radius: 6px;
     font-size: var(--fs-medium);
     outline: none;
+}
+
+.buttonsBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.loginBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--input-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
 }

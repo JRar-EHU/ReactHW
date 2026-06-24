@@ -14,11 +14,15 @@ export const NotFoundPage = () => {
 
   return (
     <>
-      <h2> No such page was found.</h2>
-      <Button onClick={handleGoBack} style={{ marginRight: "10px" }}>
-        Go Back
-      </Button>
-      <Button onClick={handleGoHome}>Go Home</Button>
+      <h2 style={{ color: "var( --color-primary)" }}>
+        No such page was found.
+      </h2>
+      <div>
+        <Button onClick={handleGoBack} style={{ marginRight: "10px" }}>
+          Go Back
+        </Button>
+        <Button onClick={handleGoHome}>Go Home</Button>
+      </div>
     </>
   );
 };
