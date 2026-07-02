@@ -24,8 +24,11 @@ If you are developing a production application, we recommend using TypeScript wi
 * **Vite ^7.3.1**
 * **ESLint & Prettier**
 * **CSS / CSS Modules**
+* * **Firebase**
 
 ---
 
 Сделано:
--Фильтрация по категориям продуктов
+-  Роутинг через react-router-dome, компоненты изменены с учетом библиотеки. Сделан защищенный роутинг.
+-  Созданы loginPage, notFoundPage, заглушки OrderPage и menuDetailPage, auth хук, .env для ключей Firebase
+-  Пользователи учитываются в firebase.

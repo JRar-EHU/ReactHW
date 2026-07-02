@@ -1,17 +1,15 @@
 import styles from "./NavLink.module.css";
+import { NavLink as RouterNavLink } from "react-router-dom";
 
-export const NavLink = ({
-  href = "#",
-  label,
-  isActive = false,
-  className = "",
-}) => {
-  const linkClasses = `
-  ${styles.link} ${isActive ? styles.isActive : ""} ${className}
-  `;
+export const NavLink = ({ href = "#", label, className = "" }) => {
   return (
-    <a href={href} className={linkClasses}>
+    <RouterNavLink
+      to={href}
+      className={({ isActive }) => `
+  ${styles.link} ${isActive ? styles.isActive : ""} ${className}
+  `}
+    >
       {label}
-    </a>
+    </RouterNavLink>
   );
 };
