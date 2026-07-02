@@ -2,14 +2,15 @@ import styles from "./ProductCard.module.css";
 import { Button } from "@components/UI/button/Button.jsx";
 import { SimpleCounterInput } from "@components/UI/simpleCounter/SimpleCounterInput.jsx";
 import { useState } from "react";
-import { useCart } from "../../../context/CartContext.jsx";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../store/slices/cartSlice.js";
 
 export const ProductCard = ({ imgUrl, name, price, description, meal }) => {
   const [quantity, setQuantity] = useState(1);
-  const { addToCart } = useCart();
+  const dispatch = useDispatch();
 
   const handleAdd = () => {
-    addToCart(quantity);
+    dispatch(addToCart(quantity));
     setQuantity(1);
   };
 

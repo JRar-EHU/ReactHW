@@ -3,9 +3,12 @@ import { Button } from "@components/UI/button/Button.jsx";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useAuth } from "@hooks/useAuth.js";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../store/slices/authSlice.js";
 
 export const LoginPage = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
   const { login, isLoading } = useAuth();
@@ -16,7 +19,7 @@ export const LoginPage = () => {
     if (name && password) {
       try {
         const loggedInUser = await login(name, password);
-        sessionStorage.setItem("user", loggedInUser);
+        dispatch(setUser(loggedInUser));
         navigate("/");
       } catch (error) {
         alert("Login failed.");

@@ -1,0 +1,33 @@
+.cartEmpty {
+    padding: 50px;
+    text-align: center;
+}
+
+.orderPage {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.order {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.orderForm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.orderFormInput {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.orderPageButton {
+    margin-top: 10px;
+}
