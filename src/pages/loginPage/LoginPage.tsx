@@ -3,12 +3,12 @@ import { Button } from "@components/UI/button/Button";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useAuth } from "@hooks/useAuth";
-import { useDispatch } from "react-redux";
 import { setUser } from "@store/slices/authSlice";
+import { useAppDispatch } from "@store/hooks";
 
 export const LoginPage = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const usernameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const { login, isLoading } = useAuth();
