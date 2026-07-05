@@ -1,16 +1,19 @@
 import styles from "./OrderPage.module.css";
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { clearCart } from "../../store/slices/cartSlice.js";
-import { Button } from "@components/UI/button/Button.jsx";
+import { clearCart } from "@store/slices/cartSlice";
+import { Button } from "@components/UI/button/Button";
+import { useAppDispatch, useAppSelector } from "@store/hooks";
+import { SyntheticEvent } from "react";
 
 export const OrderPage = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const cartCount = useSelector((state) => state.cart.cartCount);
+  const cartCount = useAppSelector((state) => state.cart.cartCount);
 
-  const handleSubmitOrder = (e) => {
+  const handleSubmitOrder = (
+    e: SyntheticEvent<HTMLFormElement, SubmitEvent>,
+  ) => {
     e.preventDefault();
     dispatch(clearCart());
     navigate("/");

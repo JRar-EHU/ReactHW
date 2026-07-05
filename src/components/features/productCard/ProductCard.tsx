@@ -1,13 +1,19 @@
 import styles from "./ProductCard.module.css";
-import { Button } from "@components/UI/button/Button.jsx";
-import { SimpleCounterInput } from "@components/UI/simpleCounter/SimpleCounterInput.jsx";
+import { Button } from "@components/UI/button/Button.js";
+import { SimpleCounterInput } from "@components/UI/simpleCounter/SimpleCounterInput.js";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../../store/slices/cartSlice.js";
+import { addToCart } from "@store/slices/cartSlice";
+import { ProductCart } from "../../../types";
+import { useAppDispatch } from "@store/hooks";
 
-export const ProductCard = ({ imgUrl, name, price, description, meal }) => {
+export const ProductCard = ({
+  imgUrl,
+  name,
+  price,
+  description,
+}: ProductCart) => {
   const [quantity, setQuantity] = useState(1);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleAdd = () => {
     dispatch(addToCart(quantity));
@@ -26,7 +32,7 @@ export const ProductCard = ({ imgUrl, name, price, description, meal }) => {
         <div className={styles.control}>
           <SimpleCounterInput
             value={quantity}
-            onChange={setQuantity}
+            onValueChange={setQuantity}
             className={styles.productCardInput}
           />
           <Button onClick={handleAdd} className={styles.productCardBtn}>

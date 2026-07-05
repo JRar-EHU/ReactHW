@@ -5,7 +5,7 @@ import { collection, addDoc } from "firebase/firestore";
 export const useAuth = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const login = async (username, password) => {
+  const login = async (username: string, password: string) => {
     try {
       setIsLoading(true);
 

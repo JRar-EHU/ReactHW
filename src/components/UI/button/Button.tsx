@@ -1,4 +1,5 @@
 import styles from "./Button.module.css";
+import { ButtonProps } from "@types";
 
 export const Button = ({
   children,
@@ -7,7 +8,7 @@ export const Button = ({
   isIcon = false,
   className = "",
   ...rest
-}) => {
+}: ButtonProps) => {
   const classes =
     `${styles.button} ${styles[variant]} ${styles[size]} ${isIcon ? styles.icon : ""} ${className}`.trim();
   return (

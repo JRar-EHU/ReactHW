@@ -1,7 +1,7 @@
 import styles from "./NavLink.module.css";
 import { NavLink as RouterNavLink } from "react-router-dom";
 
-export const NavLink = ({ href = "#", label, className = "" }) => {
+export const NavLink = ({ href = "#", label = "", className = "" }) => {
   return (
     <RouterNavLink
       to={href}

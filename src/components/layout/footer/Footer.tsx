@@ -1,11 +1,11 @@
 import styles from "./Footer.module.css";
-import { FOOTER_LINKS } from "./Footer.config.js";
+import { FOOTER_LINKS } from "./Footer.config";
 import instagram from "@assets/icons/instagram.svg";
 import youtube from "@assets/icons/youtube.svg";
 import tweeter from "@assets/icons/tweeter.svg";
-import { Logo } from "@components/UI/logo/Logo.jsx";
-import { Icon } from "@components/UI/icon/Icon.jsx";
-import { Button } from "@components/UI/button/Button.jsx";
+import { Logo } from "@components/UI/logo/Logo.js";
+import { Icon } from "@components/UI/icon/Icon.js";
+import { Button } from "@components/UI/button/Button.js";
 
 export const Footer = () => {
   return (

@@ -1,8 +1,9 @@
 import styles from "./menu.module.css";
-import { Button } from "@components/UI/button/Button.jsx";
-import { ProductCard } from "@components/features/productCard/ProductCard.jsx";
+import { Button } from "@components/UI/button/Button.js";
+import { ProductCard } from "@components/features/productCard/ProductCard";
 import { useState } from "react";
-import { useFetch } from "@hooks/useFetch.js";
+import { useFetch } from "@hooks/useFetch";
+import { Meal } from "@types";
 
 export const Menu = () => {
   const [visibleCount, setVisibleCount] = useState(6);
@@ -11,7 +12,9 @@ export const Menu = () => {
   const categories = ["Dessert", "Dinner", "Breakfast"];
 
   const url = "https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals";
-  const { data: meals = [], loading, error } = useFetch(url);
+  const { data, loading, error } = useFetch<Meal[]>(url);
+  const meals = data ?? [];
+
   if (loading) return <div>Loading...</div>;
   if (error) {
     console.log(error);
@@ -28,7 +31,7 @@ export const Menu = () => {
     setVisibleCount((prevState) => prevState + 6);
   };
 
-  const handleCategoryChange = (category) => {
+  const handleCategoryChange = (category: string) => {
     setActiveCategory(category);
     setVisibleCount(6);
   };

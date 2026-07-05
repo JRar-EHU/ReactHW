@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-export const useFetch = (url, options = {}) => {
-  const [data, setData] = useState(null);
+export const useFetch = <T>(url: string, options: RequestInit = {}) => {
+  const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -16,7 +16,7 @@ export const useFetch = (url, options = {}) => {
 
         let logs;
         try {
-          logs = JSON.parse(localStorage.getItem("api_logs")) || [];
+          logs = JSON.parse(localStorage.getItem("api_logs") || "[]");
         } catch {
           logs = [];
         }

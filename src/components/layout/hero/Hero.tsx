@@ -1,7 +1,7 @@
 import styles from "./Hero.module.css";
 import heroImage from "@assets/images/food.png";
 import clientLogo from "@assets/icons/trustpilot-logo.svg";
-import { Button } from "@components/UI/button/Button.jsx";
+import { Button } from "@components/UI/button/Button.js";
 import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {

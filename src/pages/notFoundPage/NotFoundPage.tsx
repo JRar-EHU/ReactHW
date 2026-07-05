@@ -1,5 +1,5 @@
-import { Link, useNavigate } from "react-router-dom";
-import { Button } from "@components/UI/button/Button.jsx";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@components/UI/button/Button";
 
 export const NotFoundPage = () => {
   const navigate = useNavigate();
