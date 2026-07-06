@@ -45,3 +45,10 @@ export type SimpleCounterInputProps = InputHTMLAttributes<HTMLInputElement> & {
   onValueChange: (value: number) => void;
   className?: string;
 };
+
+export type Theme = "light" | "dark";
+
+export interface ThemeContextType {
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+}

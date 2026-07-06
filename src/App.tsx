@@ -8,29 +8,32 @@ import { MenuDetailPage } from "./pages/menuDetailPage/MenuDetailPage.js";
 import { LoginPage } from "./pages/loginPage/LoginPage.js";
 import { OrderPage } from "./pages/orderPage/OrderPage.js";
 import { RequireAuth } from "@components/features/requireAuth/RequireAuth.js";
+import { ThemeProvider } from "@contexts/ThemeContext";
 
 export default function App() {
   return (
     <ErrorBoundary>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<MainLayout />}>
-            <Route element={<HomePage />} index />
-            <Route path="menu" element={<MenuPage />} />
-            <Route path="menu/:productName" element={<MenuDetailPage />} />
-            <Route path="login" element={<LoginPage />} />
-            <Route
-              path="orders"
-              element={
-                <RequireAuth>
-                  <OrderPage />
-                </RequireAuth>
-              }
-            />
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <ThemeProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MainLayout />}>
+              <Route element={<HomePage />} index />
+              <Route path="menu" element={<MenuPage />} />
+              <Route path="menu/:productName" element={<MenuDetailPage />} />
+              <Route path="login" element={<LoginPage />} />
+              <Route
+                path="orders"
+                element={
+                  <RequireAuth>
+                    <OrderPage />
+                  </RequireAuth>
+                }
+              />
+              <Route path="*" element={<NotFoundPage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
     </ErrorBoundary>
   );
 }

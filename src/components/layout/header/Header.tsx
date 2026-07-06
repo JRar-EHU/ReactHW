@@ -3,6 +3,7 @@ import { Logo } from "@components/UI/logo/Logo.js";
 import { NavLink } from "@components/UI/navLink/NavLink.js";
 import { Cart } from "@components/features/cart/Cart";
 import { useAppSelector } from "@store/hooks";
+import { ThemeToggle } from "@components/features/themeToggle/ThemeToggle";
 
 export const Header = () => {
   const cartCount = useAppSelector((state) => state.cart.cartCount);
@@ -13,6 +14,9 @@ export const Header = () => {
           <Logo />
         </div>
         <div className={styles.secondContainer}>
+          <div className={styles.themeToggle}>
+            <ThemeToggle />
+          </div>
           <nav className={styles.nav}>
             <NavLink href="/" label="Home" />
             <NavLink href="/menu" label="Menu" />

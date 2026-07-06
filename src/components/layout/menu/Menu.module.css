@@ -47,6 +47,7 @@
 
 .categorySectionControlsBtn{
     width: 150px;
+    color: var(--color-primary);
 }
 
 .cardsSection {
