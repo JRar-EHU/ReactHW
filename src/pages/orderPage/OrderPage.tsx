@@ -40,7 +40,7 @@ export const OrderPage = () => {
       </div>
 
       <form onSubmit={handleSubmitOrder} className={styles.orderForm}>
-        <label className={styles.orderForm}>
+        <label className={styles.orderLabel}>
           Delivery Address
           <input
             type="text"
@@ -50,7 +50,7 @@ export const OrderPage = () => {
           />
         </label>
 
-        <label className={styles.orderForm}>
+        <label className={styles.orderLabel}>
           Phone Number
           <input
             type="tel"

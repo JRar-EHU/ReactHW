@@ -19,7 +19,12 @@
     color: black;
 }
 
-.orderForm {
+.orderForm{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.orderLabel {
     display: flex;
     flex-direction: column;
     gap: 5px;

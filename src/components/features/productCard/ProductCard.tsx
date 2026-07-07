@@ -1,6 +1,6 @@
 import styles from "./ProductCard.module.css";
-import { Button } from "@components/UI/button/Button.js";
-import { SimpleCounterInput } from "@components/UI/simpleCounter/SimpleCounterInput.js";
+import { Button } from "@components/UI/button/Button";
+import { SimpleCounterInput } from "@components/UI/simpleCounter/SimpleCounterInput";
 import { useState } from "react";
 import { addToCart } from "@store/slices/cartSlice";
 import { ProductCart } from "@types";

@@ -1,14 +1,14 @@
-import { MainLayout } from "@components/layout/MainLayout/MainLayout.js";
-import { HomePage } from "./pages/homePage/HomePage.js";
-import { MenuPage } from "./pages/menuPage/MenuPage.js";
-import { ErrorBoundary } from "@components/UI/errorBoundary/ErrorBoundary.js";
+import { MainLayout } from "@components/layout/MainLayout/MainLayout";
+import { HomePage } from "@pages/homePage/HomePage";
+import { MenuPage } from "@pages/menuPage/MenuPage";
+import { ErrorBoundary } from "@components/UI/errorBoundary/ErrorBoundary";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { NotFoundPage } from "./pages/notFoundPage/NotFoundPage.js";
-import { MenuDetailPage } from "./pages/menuDetailPage/MenuDetailPage.js";
-import { LoginPage } from "./pages/loginPage/LoginPage.js";
-import { OrderPage } from "./pages/orderPage/OrderPage.js";
-import { RequireAuth } from "@components/features/requireAuth/RequireAuth.js";
-import { ThemeProvider } from "@context/ThemeContext.js";
+import { NotFoundPage } from "@pages/notFoundPage/NotFoundPage";
+import { MenuDetailPage } from "@pages/menuDetailPage/MenuDetailPage";
+import { LoginPage } from "@pages/loginPage/LoginPage";
+import { OrderPage } from "@pages/orderPage/OrderPage";
+import { RequireAuth } from "@components/features/requireAuth/RequireAuth";
+import { ThemeProvider } from "@context/ThemeContext";
 
 export default function App() {
   return (
