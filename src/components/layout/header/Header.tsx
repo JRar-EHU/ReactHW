@@ -4,9 +4,13 @@ import { NavLink } from "@components/UI/navLink/NavLink.js";
 import { Cart } from "@components/features/cart/Cart";
 import { useAppSelector } from "@store/hooks";
 import { ThemeToggle } from "@components/features/themeToggle/ThemeToggle";
+import { LangDropdown } from "@components/features/langSelect/LangDropdown";
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
   const cartCount = useAppSelector((state) => state.cart.cartCount);
+  const { t } = useTranslation();
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -17,12 +21,15 @@ export const Header = () => {
           <div className={styles.themeToggle}>
             <ThemeToggle />
           </div>
+          <div className={styles.langDropdown}>
+            <LangDropdown />
+          </div>
           <nav className={styles.nav}>
-            <NavLink href="/" label="Home" />
-            <NavLink href="/menu" label="Menu" />
-            <NavLink href="/company" label="Company" />
-            <NavLink href="/login" label="Login" />
-            <NavLink href="/orders" label="Orders" />
+            <NavLink href="/" label={t("navigation.home")} />
+            <NavLink href="/menu" label={t("navigation.menu")} />
+            <NavLink href="/company" label={t("navigation.company")} />
+            <NavLink href="/login" label={t("navigation.login")} />
+            <NavLink href="/orders" label={t("navigation.orders")} />
           </nav>
 
           <div className={styles.cart}>

@@ -8,7 +8,7 @@ import { MenuDetailPage } from "./pages/menuDetailPage/MenuDetailPage.js";
 import { LoginPage } from "./pages/loginPage/LoginPage.js";
 import { OrderPage } from "./pages/orderPage/OrderPage.js";
 import { RequireAuth } from "@components/features/requireAuth/RequireAuth.js";
-import { ThemeProvider } from "@contexts/ThemeContext";
+import { ThemeProvider } from "@context/ThemeContext.js";
 
 export default function App() {
   return (

@@ -3,9 +3,11 @@ import heroImage from "@assets/images/food.png";
 import clientLogo from "@assets/icons/trustpilot-logo.svg";
 import { Button } from "@components/UI/button/Button.js";
 import { useNavigate } from "react-router-dom";
+import { Trans, useTranslation } from "react-i18next";
 
 export const Hero = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handlePlaceOrder = () => {
     navigate("/orders");
@@ -15,16 +17,15 @@ export const Hero = () => {
     <section className={styles.section}>
       <div className={styles.content}>
         <h1 className={styles.title}>
-          Beautiful food & takeaway,
-          <span className={styles.highlight}> delivered </span>
-          to your door.
+          <Trans
+            i18nKey="hero.title"
+            components={{
+              highlight: <span className={styles.highlight} />,
+            }}
+          />
         </h1>
 
-        <p className={styles.description}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500.
-        </p>
+        <p className={styles.description}>{t("hero.description")}</p>
 
         <Button
           variant={"primary"}
@@ -32,7 +33,7 @@ export const Hero = () => {
           className={styles.heroBtn}
           onClick={handlePlaceOrder}
         >
-          Place an Order
+          {t("hero.button")}
         </Button>
 
         <div className={styles.client}>
@@ -42,8 +43,12 @@ export const Hero = () => {
             alt="client-logo"
           />
           <p className={styles.clientDescription}>
-            <span className={styles.highlight}>4.8 out of 5 </span>
-            based on 2000+ reviews
+            <Trans
+              i18nKey="hero.reviews"
+              components={{
+                highlight: <span className={styles.highlight} />,
+              }}
+            />
           </p>
         </div>
       </div>

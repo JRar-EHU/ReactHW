@@ -1,5 +1,5 @@
 import styles from "./ThemeToggle.module.css";
-import { useTheme } from "@contexts/ThemeContext";
+import { useTheme } from "@context/ThemeContext";
 import { Button } from "@components/UI/button/Button";
 import { Icon } from "@components/UI/icon/Icon";
 

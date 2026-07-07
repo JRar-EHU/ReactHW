@@ -1,0 +1,39 @@
+{
+  "navigation": {
+    "home": "Главная",
+    "menu": "Меню",
+    "company": "Компания",
+    "login": "Вход",
+    "orders": "Заказы"
+  },
+  "hero": {
+    "title": "Вкусная еда и доставка, <highlight>доставляем</highlight> к вашей двери.",
+    "description": "Lorem Ipsum — это просто фиктивный текст, используемый в полиграфической и издательской индустрии. Lorem Ipsum является стандартным фиктивным текстом в этой отрасли с 1500-х годов.",
+    "button": "Сделать заказ",
+    "reviews": "<highlight>4.8 из 5</highlight> на основе 2000+ отзывов"
+  },
+  "footer": {
+    "title": "Шаблон доставки и еды на вынос <br/> для малого и среднего бизнеса.",
+    "links": {
+      "company": {
+        "company": "КОМПАНИЯ",
+        "home": "Главная",
+        "order": "Заказ",
+        "faq": "Часто задаваемые вопросы",
+        "contact": "Контакты"
+      },
+      "template": {
+        "template": "ШАБЛОН",
+        "style_guide": "Руководство по стилю",
+        "changelog": "История изменений",
+        "licence": "Лицензия",
+        "webflow_university": "Университет Webflow"
+      },
+      "flowbase": {
+        "flowbase": "FLOWBASE",
+        "more_clonables": "Ещё клоны"
+      }
+    },
+    "copyright": "Создано <highlight>Flowbase</highlight> · Работает на <highlight>Webflow</highlight>"
+  }
+}
