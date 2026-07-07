@@ -16,10 +16,14 @@ export const Menu = () => {
   const { data, loading, error } = useFetch<Meal[]>(url);
   const meals = data ?? [];
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div style={{ color: "var( --color-primary)" }}>Loading...</div>;
   if (error) {
     console.log(error);
-    return <div>Failed to fetch meals</div>;
+    return (
+      <div style={{ color: "var( --color-primary)" }}>
+        Failed to fetch meals
+      </div>
+    );
   }
 
   const filteredMeals = meals.filter(

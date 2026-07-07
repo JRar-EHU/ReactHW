@@ -4,7 +4,8 @@
     "menu": "Menu",
     "company": "Company ",
     "login": "Login",
-    "orders": "Orders"
+    "orders": "Orders",
+    "logout": "Logout"
   },
   "hero": {
     "title": "Beautiful food & takeaway,<highlight>delivered</highlight> to your door.",

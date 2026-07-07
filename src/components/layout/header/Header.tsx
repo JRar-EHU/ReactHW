@@ -6,9 +6,12 @@ import { useAppSelector } from "@store/hooks";
 import { ThemeToggle } from "@components/features/themeToggle/ThemeToggle";
 import { LangDropdown } from "@components/features/langSelect/LangDropdown";
 import { useTranslation } from "react-i18next";
+import { useAuth } from "@hooks/useAuth";
 
 export const Header = () => {
   const cartCount = useAppSelector((state) => state.cart.cartCount);
+  const user = useAppSelector((state) => state.auth.user);
+  const { logout } = useAuth();
   const { t } = useTranslation();
 
   return (
@@ -28,7 +31,17 @@ export const Header = () => {
             <NavLink href="/" label={t("navigation.home")} />
             <NavLink href="/menu" label={t("navigation.menu")} />
             <NavLink href="/company" label={t("navigation.company")} />
-            <NavLink href="/login" label={t("navigation.login")} />
+
+            {user ? (
+              <NavLink
+                href="/"
+                label={t("navigation.logout")}
+                onClick={logout}
+              />
+            ) : (
+              <NavLink href="/login" label={t("navigation.login")} />
+            )}
+
             <NavLink href="/orders" label={t("navigation.orders")} />
           </nav>
 

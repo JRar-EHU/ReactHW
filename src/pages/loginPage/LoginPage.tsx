@@ -19,12 +19,17 @@ export const LoginPage = () => {
     if (name && password) {
       try {
         const loggedInUser = await login(name, password);
-        dispatch(setUser(loggedInUser));
-        navigate("/");
+        if (loggedInUser) {
+          dispatch(setUser(loggedInUser));
+          navigate("/");
+        }
       } catch (error) {
         alert("Login failed.");
       }
     }
+  };
+  const handleCancel = () => {
+    navigate("/");
   };
 
   return (
@@ -33,15 +38,33 @@ export const LoginPage = () => {
         <>Loading...</>
       ) : (
         <>
-          <label className={styles.label}>
-            Username
-            <input className={styles.input} ref={usernameRef} type="text" />
-          </label>
-          <label className={styles.label}>
-            Password
-            <input ref={passwordRef} className={styles.input} type="password" />
-          </label>
-          <Button onClick={handleLogin}>Login</Button>
+          <h1 className={styles.title}>Log in</h1>
+          <div className={styles.loginBlock}>
+            <label className={styles.label}>
+              Username
+              <input
+                className={styles.input}
+                ref={usernameRef}
+                type="text"
+                placeholder="test@test.ru"
+              />
+            </label>
+            <label className={styles.label}>
+              Password
+              <input
+                ref={passwordRef}
+                className={styles.input}
+                type="password"
+                placeholder="123456"
+              />
+            </label>
+            <div className={styles.buttonsBlock}>
+              <Button onClick={handleLogin}>Submit</Button>
+              <Button onClick={handleCancel} variant="inactive">
+                Cancel
+              </Button>
+            </div>
+          </div>
         </>
       )}
     </div>

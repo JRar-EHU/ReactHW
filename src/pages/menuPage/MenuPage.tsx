@@ -1,4 +1,4 @@
-import { Menu } from "@components/layout/menu/Menu";
+import { Menu } from "@components/features/menu/Menu";
 
 export const MenuPage = () => {
   return (
