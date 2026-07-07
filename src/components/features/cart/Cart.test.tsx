@@ -1,8 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { Cart } from "@components/features/cart/Cart";
-
-// jest.mock("@assets/icons/cart.svg", () => "cart-stub.svg");
-
+import { describe, it, expect } from "vitest";
 describe("Cart Component", () => {
   it("renders with 5 in counter", () => {
     render(<Cart count={5} />);

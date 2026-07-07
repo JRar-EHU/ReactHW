@@ -1,4 +1,5 @@
 import cartReducer, { addToCart, clearCart } from "./cartSlice";
+import { describe, it, expect } from "vitest";
 
 describe("cartSlice reducer", () => {
   const initialState = { cartCount: 0 };

@@ -48,7 +48,11 @@ export type SimpleCounterInputProps = InputHTMLAttributes<HTMLInputElement> & {
 
 export type Theme = "light" | "dark";
 
-export interface ThemeContextType {
+export type ThemeContextType = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
-}
+};
+
+export type AuthState = {
+  user: string | null;
+};

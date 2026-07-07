@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
-import { Logo } from "@components/UI/logo/Logo.js";
-import { NavLink } from "@components/UI/navLink/NavLink.js";
+import { Logo } from "@components/UI/logo/Logo";
+import { NavLink } from "@components/UI/navLink/NavLink";
 import { Cart } from "@components/features/cart/Cart";
 import { useAppSelector } from "@store/hooks";
 import { ThemeToggle } from "@components/features/themeToggle/ThemeToggle";

@@ -1,5 +1,5 @@
 import styles from "./Menu.module.css";
-import { Button } from "@components/UI/button/Button.js";
+import { Button } from "@components/UI/button/Button";
 import { ProductCard } from "@components/features/productCard/ProductCard";
 import { useState } from "react";
 import { useFetch } from "@hooks/useFetch";
@@ -16,7 +16,8 @@ export const Menu = () => {
   const { data, loading, error } = useFetch<Meal[]>(url);
   const meals = data ?? [];
 
-  if (loading) return <div style={{ color: "var( --color-primary)" }}>Loading...</div>;
+  if (loading)
+    return <div style={{ color: "var( --color-primary)" }}>Loading...</div>;
   if (error) {
     console.log(error);
     return (
